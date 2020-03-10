@@ -35,8 +35,9 @@ export const A = styled.a`
 export const P = styled.p`
   font-family: ${ffamily.content};
   font-weight: ${fweight.regular};
-  font-size: ${fsize.title};
+  font-size: ${fsize.content};
   color: ${colors.content};
+  line-height: 1.4;
 `
 
 export const Mark = styled.mark`
@@ -45,6 +46,7 @@ export const Mark = styled.mark`
   font-size: ${fsize.mark};
   color: ${colors.highlight};
   text-transform: uppercase;
+  background: none;
 `
 
 export const I = styled.i`

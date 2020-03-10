@@ -5,7 +5,8 @@ const spacings = {
   rg: "1rem",
   md: "1.5rem",
   lg: "2rem",
-  xl: "3rem"
+  xl: "3rem",
+  xxl: "6rem"
 }
 
 export default spacings
