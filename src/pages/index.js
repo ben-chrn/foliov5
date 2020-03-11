@@ -20,7 +20,7 @@ export default () => {
       <GlobalStyle />
       <Homepage />
       {projects.map((project, index) => (
-        <Project project={project} />
+        <Project project={project} index={index} key={index}/>
       ))}
       <Socials />
     </div>

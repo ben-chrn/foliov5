@@ -18,9 +18,13 @@
     "gatsby": "^2.19.7",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-styled-components": "^3.1.20",
+    "gsap": "^3.2.4",
+    "imports-loader": "^0.8.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-grid-system": "^6.2.4",
+    "scrollmagic": "^2.0.7",
+    "scrollmagic-plugin-gsap": "^1.0.4",
     "styled-components": "^5.0.1"
   },
   "devDependencies": {

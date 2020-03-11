@@ -107,3 +107,15 @@ export const Link = styled.div`
     margin-right: ${paddings.sm};
   }
 `
+
+export const PicWrapper = styled.div`
+  box-sizing:border-box;
+  padding: 24px;
+  background: ${colors.black};
+  border-radius: 20px;
+
+  img {
+    max-width:100%;
+    border-radius: 20px;
+  }
+`
