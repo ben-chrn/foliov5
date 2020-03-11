@@ -30,7 +30,7 @@ class Project extends React.Component {
     this.tl = new TimelineMax()
 
     this.tl.fromTo(this.projectTitle.current, 0.5, {opacity:0, ease:Power2.easeOut}, {opacity:1, ease:Power2.easeOut}, .2)
-    this.tl.fromTo(this.projectPicture.current, 1.5, {y:75, opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .2)
+    this.tl.fromTo(this.projectPicture.current, 1, {y:"-75px", opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .2)
     this.tl.staggerFromTo(this.projectMisc.current.children, 1, {y:15, opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .08, .3)
     this.tl.fromTo(this.projectStack.current, 0.5, {y:15, opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .5)
     this.tl.fromTo(this.projectDescription.current, 1, {y:15, opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .5)
