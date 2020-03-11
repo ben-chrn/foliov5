@@ -4,6 +4,7 @@ import React from "react"
 import { Container, Row, Col } from 'react-grid-system'
 import Homepage from '../components/Homepage'
 import Project from '../components/Project'
+import Socials from '../components/Socials'
 
 
 // Styles
@@ -21,6 +22,7 @@ export default () => {
       {projects.map((project, index) => (
         <Project project={project} />
       ))}
+      <Socials />
     </div>
   )
 }

@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background: linear-gradient(142.01deg, #141414 10.45%, #303030 82.02%);
+    background: linear-gradient(45deg, #141414 10.45%, #303030 82.02%);
     min-height: 100vh;
     font-size: 100%;
   }

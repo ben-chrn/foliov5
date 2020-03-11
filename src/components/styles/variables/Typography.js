@@ -30,6 +30,23 @@ export const H3 = styled.h3`
 `
 
 export const A = styled.a`
+  font-family: ${ffamily.content};
+  font-weight: ${fweight.regular};
+  font-size: ${fsize.content};
+  color: ${colors.white};
+  line-height: 1.4;
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: "";
+    position:absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: ${colors.highlight};
+  }
 `
 
 export const P = styled.p`
@@ -47,6 +64,7 @@ export const Mark = styled.mark`
   color: ${colors.highlight};
   text-transform: uppercase;
   background: none;
+  line-height: 1.4;
 `
 
 export const I = styled.i`

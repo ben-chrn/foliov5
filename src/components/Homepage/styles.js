@@ -2,11 +2,26 @@ import styled from "styled-components"
 
 import colors from '../styles/variables/Colors'
 import paddings from '../styles/variables/Paddings'
+import sizes from '../styles/variables/Sizes'
 
 export const Wrapper = styled.div`
   min-height: 100vh;
-  padding-top: 233px;
   position: relative;
+
+  @media ${sizes.mobileS} {
+    padding-top: 30vh;
+    padding-bottom: ${paddings.xxl};
+  }
+  
+  @media ${sizes.tablet} {
+    padding-top: 30vh;
+    padding-bottom: 0;
+  }
+
+  @media ${sizes.laptop} {
+    padding-top: 40vh;
+    padding-bottom: 0;
+  }
 
   h1 {
     margin-bottom: ${paddings.lg};
@@ -18,21 +33,6 @@ export const Wrapper = styled.div`
 
   p {
     margin-top: ${paddings.rg};
-
-    a {
-      position: relative;
-      display: inline-block;
-
-      &:after {
-        content: "";
-        position:absolute;
-        bottom: -4px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background: ${colors.highlight};
-      }
-    }
   }
 
   svg {

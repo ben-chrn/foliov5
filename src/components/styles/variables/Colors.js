@@ -14,6 +14,7 @@ const colors = {
   link: grey9,
   icon: grey7,
   white: white,
+  black: grey3,
 
   github: "#F5F5F5",
   twitter: "#1DA1F2",
