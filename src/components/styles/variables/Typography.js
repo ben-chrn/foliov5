@@ -39,12 +39,11 @@ export const A = styled.a`
   position: relative;
   display: inline-block;
   text-decoration:none;
-  padding: ${paddings.rg} 0;
 
   &:after {
     content: "";
     position:absolute;
-    bottom: 12px;
+    bottom: -4px;
     left: auto;
     right:0%;
     width: 0;

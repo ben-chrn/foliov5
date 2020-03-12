@@ -22,6 +22,10 @@ export const Icons = styled.div`
   display:flex;
   flex-direction:row;
   margin-top: ${paddings.xl};
+
+  svg {
+    margin-bottom: ${paddings.rg};
+  }
 `
 
 export const Single = styled.div`

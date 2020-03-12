@@ -109,10 +109,10 @@ export const Link = styled.div`
 `
 
 export const PicWrapper = styled.div`
-  box-sizing:border-box;
+  /* box-sizing:border-box;
   padding: 24px;
   background: ${colors.black};
-  border-radius: 20px;
+  border-radius: 20px; */
 
   img {
     max-width:100%;
