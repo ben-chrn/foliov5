@@ -42,7 +42,7 @@ class Project extends React.Component {
     this.scene = new ScrollMagic.Scene({
       duration: 0,
       triggerElement:`#projectWrapper_${this.props.index}`,
-      triggerHook: "onEnter",
+      triggerHook: 0.7,
       reverse: false
     })
     .setTween(this.tl)
