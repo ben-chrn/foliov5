@@ -25,6 +25,7 @@ export const Wrapper = styled.div`
 
   h1 {
     margin-bottom: ${paddings.lg};
+    opacity: 0;
 
     i {
       color: ${colors.highlight};
@@ -33,9 +34,11 @@ export const Wrapper = styled.div`
 
   p {
     margin-top: ${paddings.rg};
+    opacity: 0;
   }
 
   svg {
+    opacity: 0;
     position: absolute;
     margin-top: ${paddings.xxl};
     left: 50%;

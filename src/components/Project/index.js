@@ -41,8 +41,8 @@ class Project extends React.Component {
     this.controller = new ScrollMagic.Controller()
     this.scene = new ScrollMagic.Scene({
       duration: 0,
-      offset: 100,
       triggerElement:`#projectWrapper_${this.props.index}`,
+      triggerHook: 0,
       reverse: false
     })
     .setTween(this.tl)
