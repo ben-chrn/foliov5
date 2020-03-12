@@ -46,7 +46,7 @@ class Homepage extends React.Component {
               <div ref={this.texts}>
                 <S.P>I’m a <S.Mark>front-end developer & product designer</S.Mark> dedicated to building beautiful experiences and crafted material.</S.P>
                 <S.P>I've had the chance to work on many <S.Mark>amazing projects</S.Mark>, which you can see a sample off by scrolling just a little</S.P>
-                <S.P>If something in here interests you in any way, don’t hesitate to <S.A><S.Mark>reach out.</S.Mark></S.A></S.P>
+                <S.P>If something in here interests you in any way, don’t hesitate to <S.A href="mailto:benjaminchareyron@gmail.com">reach out.</S.A></S.P>
               </div>
               <div ref={this.icon}><Icon type="caret-down" id="homeIcon" /></div>
             </Col>

@@ -44,9 +44,9 @@ class Socials extends React.Component {
       <So.Wrapper id="socialWrapper">
         <S.P ref={this.text}>Find me on</S.P>
         <So.Icons ref={this.icons}>
-          <So.Single><Icon type="github" /><S.A>Github</S.A></So.Single>
-          <So.Single><Icon type="twitter" /><S.A>Twitter</S.A></So.Single>
-          <So.Single><Icon type="email" /><S.A>Email</S.A></So.Single>
+          <So.Single><Icon type="github" /><S.A href="https://github.com/ben-chrn" target="_blank">Github</S.A></So.Single>
+          <So.Single><Icon type="twitter" /><S.A href="https://twitter.com/ben-chrn" target="_blank">Twitter</S.A></So.Single>
+          <So.Single><Icon type="email" /><S.A href="mailto:benjaminchareyron@gmail.com">Email</S.A></So.Single>
         </So.Icons>
       </So.Wrapper>
     )

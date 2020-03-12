@@ -69,10 +69,10 @@ class Project extends React.Component {
                   ))}
                 </P.Stack>
                 <S.P ref={this.projectDescription}>{project.description}</S.P>
-                <P.Link ref={this.projectLink}><S.A>Link</S.A><Icon type="arrow-right"/></P.Link>
+                <P.Link ref={this.projectLink}><S.A href={project.url} target="_blank">Link</S.A><Icon type="arrow-right"/></P.Link>
               </Col>
               <Col xs={12} lg={6} offset={{xl:1}}>
-                <P.PicWrapper ref={this.projectPicture}><img src="https://via.placeholder.com/800x800" /></P.PicWrapper>
+                <P.PicWrapper ref={this.projectPicture}><img src={require(`../../../static/${project.fileName}`)} /></P.PicWrapper>
               </Col>
           </Row>
         </Container>

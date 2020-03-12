@@ -30,8 +30,4 @@ export const Single = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 ${paddings.rg};
-
-  svg {
-    margin-bottom: ${paddings.sm};
-  }
 `

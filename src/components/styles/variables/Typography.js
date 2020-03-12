@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import fonts from './Fonts'
 import colors from './Colors'
+import paddings from './Paddings'
 
 let ffamily = fonts.family,
     fweight = fonts.weights,
@@ -37,15 +38,27 @@ export const A = styled.a`
   line-height: 1.4;
   position: relative;
   display: inline-block;
+  text-decoration:none;
+  padding: ${paddings.rg} 0;
 
   &:after {
     content: "";
     position:absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
+    bottom: 12px;
+    left: auto;
+    right:0%;
+    width: 0;
     height: 1px;
     background: ${colors.highlight};
+    transition: width .2s ease-in-out;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+      right:0;
+      left: 0;
+    }
   }
 `
 

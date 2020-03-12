@@ -1,10 +1,11 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 
 // Components
-import { Container, Row, Col } from 'react-grid-system'
 import Homepage from '../components/Homepage'
 import Project from '../components/Project'
 import Socials from '../components/Socials'
+import SEO from '../components/SEO'
 
 
 // Styles
@@ -17,6 +18,7 @@ export default () => {
   
   return(
     <div>
+      <SEO />
       <GlobalStyle />
       <Homepage />
       {projects.map((project, index) => (
