@@ -29,20 +29,20 @@ class Project extends React.Component {
     
     this.tl = new TimelineMax()
 
-    this.tl.fromTo(this.projectTitle.current, 0.5, {opacity:0, ease:Power2.easeOut}, {opacity:1, ease:Power2.easeOut}, .2)
-    this.tl.fromTo(this.projectPicture.current, 1, {y:"-75px", opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .2)
-    this.tl.staggerFromTo(this.projectMisc.current.children, 1, {y:15, opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .08, .3)
-    this.tl.fromTo(this.projectStack.current, 0.5, {y:15, opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .5)
-    this.tl.fromTo(this.projectDescription.current, 1, {y:15, opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .5)
-    this.tl.fromTo(this.projectLink.current, 0.5, {y:15, opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .5)
+    this.tl.fromTo(this.projectTitle.current, 0.5, {opacity:0, ease:Power2.easeOut}, {opacity:1, ease:Power2.easeOut}, 0)
+    this.tl.fromTo(this.projectPicture.current, 1, {y:"-75px", opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, 0)
+    this.tl.staggerFromTo(this.projectMisc.current.children, 1, {y:15, opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .08, .1)
+    this.tl.fromTo(this.projectStack.current, 0.5, {y:15, opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .3)
+    this.tl.fromTo(this.projectDescription.current, 1, {y:15, opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .3)
+    this.tl.fromTo(this.projectLink.current, 0.5, {y:15, opacity:0, ease:Power2.easeOut}, {y:0, opacity:1, ease:Power2.easeOut}, .3)
 
     ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax)
 
-    this.controller = new ScrollMagic.Controller()
+    this.controller = new ScrollMagic.Controller({addIndicators: true})
     this.scene = new ScrollMagic.Scene({
       duration: 0,
       triggerElement:`#projectWrapper_${this.props.index}`,
-      triggerHook: 0,
+      triggerHook: "onEnter",
       reverse: false
     })
     .setTween(this.tl)
