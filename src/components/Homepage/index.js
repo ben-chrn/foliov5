@@ -48,7 +48,7 @@ class Homepage extends React.Component {
                 <S.P>I've had the chance to work on many <S.Mark>amazing projects</S.Mark>, which you can see a sample off by scrolling just a little</S.P>
                 <S.P>If something in here interests you in any way, don’t hesitate to <S.A href="mailto:benjaminchareyron@gmail.com">reach out.</S.A></S.P>
               </div>
-              <div ref={this.icon}><Icon type="caret-down" id="homeIcon" /></div>
+              <div className="iconWrapper" ref={this.icon}><Icon type="caret-down" id="homeIcon" /></div>
             </Col>
           </Row>
         </Container>

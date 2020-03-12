@@ -6,6 +6,7 @@ import sizes from '../styles/variables/Sizes'
 
 export const Wrapper = styled.div`
   padding: ${paddings.xxl} ${paddings.md};
+  min-height: 80vh;
 
   @media ${sizes.laptopL} {
     padding: ${paddings.xxl} ${paddings.xxl};

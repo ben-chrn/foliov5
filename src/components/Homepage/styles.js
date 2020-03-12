@@ -37,11 +37,14 @@ export const Wrapper = styled.div`
     opacity: 0;
   }
 
-  svg {
+  div.iconWrapper {
     opacity: 0;
-    position: absolute;
-    margin-top: ${paddings.xxl};
-    left: 50%;
-    transform: translateX(-50%);
+    
+    svg {
+      position: absolute;
+      margin-top: ${paddings.xxl};
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 `
