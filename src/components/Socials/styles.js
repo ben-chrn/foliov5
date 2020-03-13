@@ -1,8 +1,5 @@
 import styled from "styled-components"
-
-import colors from '../styles/variables/Colors'
 import paddings from '../styles/variables/Paddings'
-import sizes from '../styles/variables/Sizes'
 
 
 export const Wrapper = styled.div`

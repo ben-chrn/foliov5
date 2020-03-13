@@ -5,31 +5,40 @@ import paddings from '../styles/variables/Paddings'
 import sizes from '../styles/variables/Sizes'
 
 export const Wrapper = styled.div`
-  padding: ${paddings.xxl} ${paddings.md};
   min-height: 80vh;
-
-  @media ${sizes.laptopL} {
-    padding: ${paddings.xxl} ${paddings.xxl};
-  }
+  display:flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: ${paddings.xxl} ${paddings.lg};
 
   @media ${sizes.laptop} {
-    padding: ${paddings.xxl} ${paddings.lg};
+    padding: ${paddings.xxl} ${paddings.xxl};
+    flex-direction: row;
+  }
+`
+
+export const TextWrapper = styled.div`
+  flex: 1;
+  margin-top: ${paddings.xl};
+
+  @media ${sizes.laptop} {
+    margin-top: 0;
+  }
+`
+
+export const PicWrapper = styled.div`
+  flex: 1;
+  width: 100%;
+
+  @media ${sizes.laptop} {
+    width: unset;
+    padding-left: ${paddings.xxl};
   }
 
-  >div>div {
-    flex-direction:column-reverse;
-
-    >div:first-child {
-      margin-top: ${paddings.lg};
-    }
-
-    @media ${sizes.laptop} {
-      flex-direction:row;
-
-      >div:first-child {
-        margin-top: 0;
-      }
-    }
+  img {
+    width:100%;
+    border-radius: 20px;
   }
 `
 
@@ -106,17 +115,5 @@ export const Link = styled.div`
   a {
     text-transform: uppercase;
     margin-right: ${paddings.sm};
-  }
-`
-
-export const PicWrapper = styled.div`
-  /* box-sizing:border-box;
-  padding: 24px;
-  background: ${colors.black};
-  border-radius: 20px; */
-
-  img {
-    max-width:100%;
-    border-radius: 20px;
   }
 `

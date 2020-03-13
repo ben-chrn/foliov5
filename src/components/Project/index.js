@@ -4,7 +4,6 @@ import { TimelineMax, TweenMax, Power2 } from "gsap"
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap"
 
 // Components
-import { Container, Row, Col } from 'react-grid-system'
 import Icon from '../Icon'
 
 // Styles
@@ -38,7 +37,7 @@ class Project extends React.Component {
 
     ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax)
 
-    this.controller = new ScrollMagic.Controller({addIndicators: true})
+    this.controller = new ScrollMagic.Controller()
     this.scene = new ScrollMagic.Scene({
       duration: 0,
       triggerElement:`#projectWrapper_${this.props.index}`,
@@ -54,28 +53,22 @@ class Project extends React.Component {
   
     return(
       <P.Wrapper id={`projectWrapper_${this.props.index}`}>
-        <Container>
-          <Row>
-              <Col xs={12} lg={6} xl={5}>
-                <S.H2 ref={this.projectTitle}>{project.title}</S.H2>
-                <P.Misc ref={this.projectMisc}>
-                  <S.Mark>{project.dates[0]}</S.Mark>
-                  <S.Mark>{project.dates[1]}</S.Mark>
-                  <S.Mark>{project.role}</S.Mark>
-                </P.Misc>
-                <P.Stack ref={this.projectStack}>
-                  {project.stack.map(tech => (
-                    <Icon type={tech} />
-                  ))}
-                </P.Stack>
-                <S.P ref={this.projectDescription}>{project.description}</S.P>
-                <P.Link ref={this.projectLink}><S.A href={project.url} target="_blank">Link</S.A><Icon type="arrow-right"/></P.Link>
-              </Col>
-              <Col xs={12} lg={6} offset={{xl:1}}>
-                <P.PicWrapper ref={this.projectPicture}><img src={require(`../../../static/${project.fileName}`)} /></P.PicWrapper>
-              </Col>
-          </Row>
-        </Container>
+        <P.TextWrapper>
+          <S.H2 ref={this.projectTitle}>{project.title}</S.H2>
+          <P.Misc ref={this.projectMisc}>
+            <S.Mark>{project.dates[0]}</S.Mark>
+            <S.Mark>{project.dates[1]}</S.Mark>
+            <S.Mark>{project.role}</S.Mark>
+          </P.Misc>
+          <P.Stack ref={this.projectStack}>
+            {project.stack.map(tech => (
+              <Icon key={tech } type={tech} />
+            ))}
+          </P.Stack>
+          <S.P ref={this.projectDescription}>{project.description}</S.P>
+          <P.Link ref={this.projectLink}><S.A href={project.url} target="_blank">Link</S.A><Icon type="arrow-right"/></P.Link>
+        </P.TextWrapper>
+        <P.PicWrapper ref={this.projectPicture}><img alt={project.title} src={require(`../../../static/${project.fileName}`)} /></P.PicWrapper>
       </P.Wrapper>
     )
   }

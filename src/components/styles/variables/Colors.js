@@ -3,9 +3,8 @@ const cyan = "#138585",
     grey9= "#DBDBDB",
     grey8 = "#ACACAC",
     grey7 = "#7D7D7D",
-    grey3 = "#262626",
-    grey2 = "#303030",
-    grey1 = "#141414"
+    grey3 = "#262626"
+
 
 const colors = {
   title: grey8,

@@ -1,8 +1,7 @@
 import React from 'react'
-import { TimelineMax, TweenMax, Power2 } from "gsap"
+import { TimelineMax, Power2 } from "gsap"
 
 // Components
-import { Container, Row, Col } from 'react-grid-system'
 import Icon from '../Icon'
 
 // Styles
@@ -32,26 +31,18 @@ class Homepage extends React.Component {
 
     return(
       <H.Wrapper>
-        <Container fluid>
-          <Row align="center">
-            <Col 
-              xs={10}
-              md={6}
-              offset={{ xs:1, md:3}}
-            >
-              <S.H1 ref={this.title}>
-                Hi<i>,</i><br/>
-                I'm BenChrn<i>.</i>
-              </S.H1>
-              <div ref={this.texts}>
-                <S.P>I’m a <S.Mark>front-end developer & product designer</S.Mark> dedicated to building beautiful experiences and crafted material.</S.P>
-                <S.P>I've had the chance to work on many <S.Mark>amazing projects</S.Mark>, which you can see a sample off by scrolling just a little</S.P>
-                <S.P>If something in here interests you in any way, don’t hesitate to <S.A href="mailto:benjaminchareyron@gmail.com">reach out.</S.A></S.P>
-              </div>
-              <div className="iconWrapper" ref={this.icon}><Icon type="caret-down" id="homeIcon" /></div>
-            </Col>
-          </Row>
-        </Container>
+        <div>
+          <S.H1 ref={this.title}>
+            Hi<i>,</i><br/>
+            I'm BenChrn<i>.</i>
+          </S.H1>
+          <div ref={this.texts}>
+            <S.P>I’m a <S.Mark>front-end developer & product designer</S.Mark> dedicated to building beautiful experiences and crafted material.</S.P>
+            <S.P>I've had the chance to work on many <S.Mark>amazing projects</S.Mark>, which you can see a sample off by scrolling just a little</S.P>
+            <S.P>If something in here interests you in any way, don’t hesitate to <S.A href="mailto:benjaminchareyron@gmail.com">reach out.</S.A></S.P>
+          </div>
+          <div className="iconWrapper" ref={this.icon}><Icon type="caret-down" id="homeIcon" /></div>
+        </div>
       </H.Wrapper>
     )
   }

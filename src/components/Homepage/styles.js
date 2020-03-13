@@ -7,20 +7,20 @@ import sizes from '../styles/variables/Sizes'
 export const Wrapper = styled.div`
   min-height: 100vh;
   position: relative;
+  padding-left: ${paddings.lg};
+  padding-right: ${paddings.lg};
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: center;
 
-  @media ${sizes.mobileS} {
-    padding-top: 30vh;
-    padding-bottom: ${paddings.xxl};
-  }
-  
-  @media ${sizes.tablet} {
-    padding-top: 30vh;
-    padding-bottom: 0;
+  > div {
+    max-width: calc(${paddings.xxl} * 6);
   }
 
   @media ${sizes.laptop} {
-    padding-top: 40vh;
-    padding-bottom: 0;
+    padding-left: ${paddings.xxl};
+    padding-right: ${paddings.xxl};
   }
 
   h1 {

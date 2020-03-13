@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import fonts from './Fonts'
 import colors from './Colors'
-import paddings from './Paddings'
 
 let ffamily = fonts.family,
     fweight = fonts.weights,
